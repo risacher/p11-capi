@@ -16,7 +16,7 @@ I am providing [32-bit](https://github.com/risacher/p11-capi/raw/master/w32/p11c
 
 1. [Determine if you are using the 32-bit or 64-bit version of Firefox.](https://support.mozilla.org/en-US/kb/how-do-i-tell-if-32-bit-or-64-bit)
 2. Download the appropriate .DLL file ([32-bit](https://github.com/risacher/p11-capi/raw/master/w32/p11capi_w32.dll) or [64-bit](https://github.com/risacher/p11-capi/raw/master/w64/p11capi_w64.dll)) and save it somewhere
-3. Inside Firefox, go to Options → Advanced → Certificates → Security Devices → Load
+3. Inside Firefox, go to [Options](about:preferences) → [Advanced](about:preferences#advanced) → Certificates → Security Devices → Load
 4. Enter a module name (I recommend "p11-capi") and browse to the .DLL file.
 
 If all goes well, it Firefox will show the new module in the Device Manager window, and all of the certificate categories from the Windows certificate stores.  

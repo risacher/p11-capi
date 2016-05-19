@@ -1,0 +1,69 @@
+# Microsoft Developer Studio Generated Dependency File, included by p11c.mak
+
+".\p11-capi-builtin.c" : \
+	"..\..\..\..\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	".\p11-capi-util.h"\
+	".\p11-capi.h"\
+	".\pkcs11\cryptoki.h"\
+	".\pkcs11\pkcs11.h"\
+	".\pkcs11\pkcs11f.h"\
+	".\pkcs11\pkcs11n.h"\
+	".\pkcs11\pkcs11t.h"\
+	
+
+".\p11-capi-cert.c" : \
+	"..\..\..\..\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	".\p11-capi-util.h"\
+	".\p11-capi.h"\
+	".\pkcs11\cryptoki.h"\
+	".\pkcs11\pkcs11.h"\
+	".\pkcs11\pkcs11f.h"\
+	".\pkcs11\pkcs11t.h"\
+	
+
+".\p11-capi-object.c" : \
+	"..\..\..\..\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	".\p11-capi-util.h"\
+	".\p11-capi.h"\
+	".\pkcs11\cryptoki.h"\
+	".\pkcs11\pkcs11.h"\
+	".\pkcs11\pkcs11f.h"\
+	".\pkcs11\pkcs11n.h"\
+	".\pkcs11\pkcs11t.h"\
+	
+
+".\p11-capi-session.c" : \
+	"..\..\..\..\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	".\p11-capi-util.h"\
+	".\p11-capi.h"\
+	".\pkcs11\cryptoki.h"\
+	".\pkcs11\pkcs11.h"\
+	".\pkcs11\pkcs11f.h"\
+	".\pkcs11\pkcs11t.h"\
+	
+
+".\p11-capi-trust.c" : \
+	"..\..\..\..\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	".\p11-capi-util.h"\
+	".\p11-capi.h"\
+	".\pkcs11\cryptoki.h"\
+	".\pkcs11\pkcs11.h"\
+	".\pkcs11\pkcs11f.h"\
+	".\pkcs11\pkcs11n.h"\
+	".\pkcs11\pkcs11t.h"\
+	".\x509-usages.h"\
+	
+
+".\p11-capi-util.c" : \
+	".\p11-capi-util.h"\
+	
+
+.\p11-capi.c : \
+	"..\..\..\..\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	".\p11-capi-util.h"\
+	".\p11-capi.h"\
+	".\pkcs11\cryptoki.h"\
+	".\pkcs11\pkcs11.h"\
+	".\pkcs11\pkcs11f.h"\
+	".\pkcs11\pkcs11t.h"\
+	

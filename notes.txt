@@ -15,7 +15,10 @@ it?
 
 As it turns out (for me), the Base Smart Card Crypto Provider will
 work with the SHA-2 algs, at least on Win8.  Probably on WinXP SP3,
-and any Windows newer than that.
+and any Windows newer than that.  The issue is that CertOIDToAlgId() 
+does not return the correct AlgId for SHA-2 algorithms, even when they 
+will work.  Instead it returns 0xFFFFFFFF (CALC_OID_INFO_CNG_ONLY), which 
+is misleading, since CNG is *not* required to use SHA-2.
 
 
 CryptDecodeObject

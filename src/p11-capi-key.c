@@ -42,7 +42,6 @@ typedef struct _KeyObjectData
 	CRYPT_INTEGER_BLOB key_identifier;
 	CRYPT_DATA_BLOB raw_public_key;
 	CRYPT_KEY_PROV_INFO* prov_info;
-	CRYPT_KEY_PROV_INFO* prov_info_aes;
 }
 KeyObjectData;
 

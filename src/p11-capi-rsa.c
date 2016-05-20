@@ -1,5 +1,6 @@
 /* 
  * Copyright (C) 2008 Stef Walter
+ * Copyright (C) 2016 Dan Risacher
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public

@@ -653,10 +653,6 @@ key_alloc_data(P11cSession* sess, P11cObject* obj, CRYPT_KEY_PROV_INFO* prov_inf
 	kdata->base.object = obj->id;
 	kdata->base.data_funcs = &key_objdata_vtable;
         
-        // Attempt to get the Enhanced RSA and AES Cryptographic Provider.
-        CryptAcquireContext(kdata->prov_info_aes, NULL, MS_ENH_RSA_AES_PROV, PROV_RSA_AES, 0);
-
-
 	return &(kdata->base);
 }
 

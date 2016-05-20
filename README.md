@@ -22,3 +22,8 @@ I am providing [32-bit](https://github.com/risacher/p11-capi/raw/master/w32/p11c
 If all goes well, it Firefox will show the new module in the Device Manager window, and all of the certificate categories from the Windows certificate stores.  
 
 If all doesn't go well, please open an issue here on GitHub.
+
+-----
+    SHA-256 sums:
+    9a5201a897f0eb9bb91277535f328710c1f485aaec5ea8fe8ff86bf1cd8dc246  w32/p11capi_w32.dll
+    b4929f6c85775a5f0638cf49a1794d7c68119c36d036e48cd65dc093f769c4a2  w64/p11capi_w64.dll

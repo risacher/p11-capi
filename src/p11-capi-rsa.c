@@ -181,11 +181,11 @@ parse_rsa_pkcs_der_hash(CK_BYTE_PTR input, CK_ULONG n_input,
           p11c_log("forcing algorithm to CALG_SHA_256 (0x%x)", CALG_SHA_256);
         }
         if (!strncmp("2.16.840.1.101.3.4.2.2", oid_str, 22)) {
-          *algorithm = CALG_SHA_256;
+          *algorithm = CALG_SHA_384;
           p11c_log("forcing algorithm to CALG_SHA_384 (0x%x)", CALG_SHA_384);
         }
         if (!strncmp("2.16.840.1.101.3.4.2.3", oid_str, 22)) {
-          *algorithm = CALG_SHA_256;
+          *algorithm = CALG_SHA_512;
           p11c_log("forcing algorithm to CALG_SHA_512 (0x%x)", CALG_SHA_512);
         }
       }

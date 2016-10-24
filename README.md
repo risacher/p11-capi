@@ -25,5 +25,5 @@ If all doesn't go well, please open an issue here on GitHub.
 
 -----
     SHA-256 sums:
-    9a5201a897f0eb9bb91277535f328710c1f485aaec5ea8fe8ff86bf1cd8dc246  w32/p11capi_w32.dll
-    b4929f6c85775a5f0638cf49a1794d7c68119c36d036e48cd65dc093f769c4a2  w64/p11capi_w64.dll
+    133e74cd9ea57467da1b25b54bb9511eb3d8d02164f39d23243efdc9941e4909  w32/p11capi_w32.dll
+    0a834c7b43915c1c38a5563b914c4bb56acf216564902ead98cfe0406d0eab60  w64/p11capi_w64.dll

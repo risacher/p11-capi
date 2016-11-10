@@ -8,7 +8,7 @@ A pkcs11 implementation on top of win32 (or win64) capi
 
 There are two main interfaces for computer applications to interface with smartcards and other hardware security modules. The PKCS#11 interface is a cross-platform, de-facto industry standard API. Microsoft CAPI is a proprietary interface only supported on Windows platforms, but as Windows has significant market-share in large enterprises that use smartcards, it is more frequently supported.
 
-This version has minor changes from Stef Walter's 2008 release. In particular, it fixes support for [SHA-2](https://en.wikipedia.org/wiki/SHA-2) (i.e. SHA256, SHA284 and SHA512) in certain situations.
+This version has minor changes from Stef Walter's 2008 release. In particular, it fixes support for [SHA-2](https://en.wikipedia.org/wiki/SHA-2) (i.e. SHA256, SHA384 and SHA512) in certain situations.
 
 I am providing [32-bit](https://github.com/risacher/p11-capi/raw/master/w32/p11capi_w32.dll) and [64-bit](https://github.com/risacher/p11-capi/raw/master/w64/p11capi_w64.dll) binaries as a convenience. 
 
@@ -25,5 +25,5 @@ If all doesn't go well, please open an issue here on GitHub.
 
 -----
     SHA-256 sums:
-    9a5201a897f0eb9bb91277535f328710c1f485aaec5ea8fe8ff86bf1cd8dc246  w32/p11capi_w32.dll
-    b4929f6c85775a5f0638cf49a1794d7c68119c36d036e48cd65dc093f769c4a2  w64/p11capi_w64.dll
+    133e74cd9ea57467da1b25b54bb9511eb3d8d02164f39d23243efdc9941e4909  w32/p11capi_w32.dll
+    0a834c7b43915c1c38a5563b914c4bb56acf216564902ead98cfe0406d0eab60  w64/p11capi_w64.dll

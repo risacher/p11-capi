@@ -407,33 +407,28 @@ p11c_cert_certificate_get_bytes(PCCERT_CONTEXT cert, CK_ATTRIBUTE_PTR attr)
 
 	/*
 	 * Description of the object.
-	 * - We use CAPI's CERT_FRIENDLY_NAME_PROP_ID property, 
-	 *   converted into UTF8.
-	 * - Yes this is slow, but this is not really a property
-	 *   that's searched on or retrieved intensively.
+	 *
+	 * We use CAPI's CERT_HASH_PROP_ID property, converted into a
+	 * UTF8 hex string. This is the thumbprint, which is generally
+	 * used to identify certificates on Windows systems.
 	 */
 	case CKA_LABEL:
 		{
-			WCHAR* utf16 = NULL;
+			BYTE* hash = NULL;
 			DWORD size;
 
-			if(!CertGetCertificateContextProperty(cert, CERT_FRIENDLY_NAME_PROP_ID, NULL, &size))
+			if(!CertGetCertificateContextProperty(cert, CERT_HASH_PROP_ID, NULL, &size))
 			{
-				err = GetLastError();
-				if(err == CRYPT_E_NOT_FOUND)
-					utf16 = L"Unnamed Certificate";
-				else
-					return p11c_winerr_to_ckr(err);
+				return p11c_winerr_to_ckr(GetLastError());
 			}
 
-			if(!utf16) 
+			hash = _alloca(size);
+			if(!CertGetCertificateContextProperty(cert, CERT_HASH_PROP_ID, hash, &size))
 			{
-				utf16 = _alloca(size);
-				if(!CertGetCertificateContextProperty(cert, CERT_FRIENDLY_NAME_PROP_ID, utf16, &size))
-					return p11c_winerr_to_ckr(GetLastError());
+				return p11c_winerr_to_ckr(GetLastError());
 			}
 
-			return p11c_return_string(attr, utf16);
+			return p11c_return_data_as_hex_string(attr, hash, size);
 		}
 		break;
 

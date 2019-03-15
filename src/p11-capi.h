@@ -108,6 +108,9 @@ CK_RV       p11c_return_data_raw          (CK_VOID_PTR output, CK_ULONG_PTR n_ou
 CK_RV       p11c_return_string            (CK_ATTRIBUTE_PTR attr, 
                                            WCHAR* string);
 
+CK_RV       p11c_return_data_as_hex_string(CK_ATTRIBUTE_PTR attr,
+                                           CK_VOID_PTR data, CK_ULONG length);
+
 CK_RV       p11c_return_dword_as_bytes    (CK_ATTRIBUTE_PTR attr, 
                                            DWORD value);
 

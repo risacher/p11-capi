@@ -288,6 +288,42 @@ p11c_return_string(CK_ATTRIBUTE_PTR attr, WCHAR* string)
 }
 
 CK_RV
+p11c_return_data_as_hex_string(CK_ATTRIBUTE_PTR attr, CK_VOID_PTR data, CK_ULONG length)
+{
+	CK_ULONG i;
+
+	/* Allow 2 characters per byte. PKCS#11 strings are not null-terminated. */
+	const CK_ULONG string_length = length * 2;
+
+	/* Just asking for the length */
+	if(!attr->pValue)
+	{
+		attr->ulValueLen = string_length;
+		return CKR_OK;
+	}
+
+	/* Buffer is too short */
+	if(attr->ulValueLen < string_length)
+	{
+		attr->ulValueLen = string_length;
+		return CKR_BUFFER_TOO_SMALL;
+	}
+
+	/* Convert to hex string, discarding null terminators */
+	for(i = 0; i < length; ++i)
+	{
+		unsigned char* bytes = data;
+		unsigned char* value = attr->pValue;
+		char buf[3];
+
+		snprintf(buf, sizeof(buf), "%02x", bytes[i]);
+		memcpy(&value[i * 2], buf, sizeof(buf) - 1);
+	}
+
+	return CKR_OK;
+}
+
+CK_RV
 p11c_return_dword_as_bytes(CK_ATTRIBUTE_PTR attr, DWORD value)
 {
 	int i;
